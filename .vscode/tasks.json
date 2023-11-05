@@ -3,13 +3,17 @@
         {
             "type": "cppbuild",
             "label": "C/C++: g++.exe build active file",
-            "command": "C:\\msys64\\ucrt64\\bin\\g++.exe",
+            "command": "C:/msys64/ucrt64/bin/g++.exe",
             "args": [
+                "-W",
+                "-Wall",
                 "-fdiagnostics-color=always",
                 "-g",
                 "${file}",
                 "-o",
-                "${fileDirname}\\${fileBasenameNoExtension}.exe"
+                "${fileDirname}/${fileBasenameNoExtension}.exe",
+                "-I${workspaceFolder}/SDL2/include",
+                "-L${workspaceFolder}/SDL2/lib/x64/SDL2.lib"
             ],
             "options": {
                 "cwd": "${fileDirname}"

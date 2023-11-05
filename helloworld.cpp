@@ -3,6 +3,7 @@
 #include <string>
 
 #include "src/test.cpp"
+#include "src/template.hpp"
 
 using namespace std;
 
@@ -22,5 +23,12 @@ int main() {
 
     cout << "\n" << num;
     cout << "\n" << numRef;
+    cout << endl;
+
+    TemplatteTest templateTest;
+    numRef *= 2;
+
+    cout << "Max num / numRef = " << templateTest.max(num, numRef) << "\n";
+    cout << "Max " << msg.at(0).c_str() << " / " << msg.at(1).c_str() << " numRef = " << templateTest.max(msg.at(0).c_str(), msg.at(1).c_str());
     cout << endl;
 }
