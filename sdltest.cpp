@@ -15,11 +15,11 @@ int SDLTest::OnExecute() {
         return -1;
     }
  
-    SDL_Event Event;
+    SDL_Event event;
  
     while(_running) {
-        while(SDL_PollEvent(&Event)) {
-            OnEvent(&Event);
+        while(SDL_PollEvent(&event)) {
+            OnEvent(&event);
         }
  
         OnLoop();
@@ -31,8 +31,12 @@ int SDLTest::OnExecute() {
     return 0;
 }
 
-int main(int /*argc*/, char* /*argv[]*/) {
+int main(int /*argc*/, char** /*argv[]*/) {
     SDLTest theApp;
+
+    Uint32 flags = SDL_WINDOW_OPENGL | SDL_WINDOW_RESIZABLE;
+
+    /*SDL_Window *window = */SDL_CreateWindow("Hello Window", 100, 100, 800, 600, flags);
  
     return theApp.OnExecute();
 }

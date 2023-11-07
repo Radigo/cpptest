@@ -2,8 +2,8 @@
     "tasks": [
         {
             "type": "cppbuild",
-            "label": "mingw64 build",
-            "command": "C:/msys64/mingw64.exe",
+            "label": "g++ build",
+            "command": "C:/msys64/ucrt64/bin/g++.exe",
             "args": [
                 "-W",
                 "-Wall",
@@ -12,9 +12,9 @@
                 "${workspaceFolder}/sdltest.cpp",
                 "-o",
                 "${workspaceFolder}/sdltest.exe",
-                "-I${workspaceFolder}/SDL2/include",
-                "-lmingw32",
-                "-lSDL2"
+                "-LC:/msys64/lib",
+                "-lSDL2",
+                "-lSDL2main"
             ],
             "options": {
                 "cwd": "${fileDirname}"

@@ -28,7 +28,7 @@
                     "ignoreFailures": true
                 }
             ],
-            "preLaunchTask": "mingw64 build"
+            "preLaunchTask": "g++ build"
         },
         {
             "name": "HelloWorld",
