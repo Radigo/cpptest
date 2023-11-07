@@ -3,7 +3,7 @@
         {
             "type": "cppbuild",
             "label": "C/C++: g++.exe build active file",
-            "command": "C:/msys64/ucrt64/bin/g++.exe",
+            "command": "C:/msys64/ucrt64/bin/g++.exe", <<- change for mingw
             "args": [
                 "-W",
                 "-Wall",
@@ -13,7 +13,8 @@
                 "-o",
                 "${fileDirname}/${fileBasenameNoExtension}.exe",
                 "-I${workspaceFolder}/SDL2/include",
-                "-L${workspaceFolder}/SDL2/lib/x64/SDL2.lib"
+                "-L${workspaceFolder}/SDL2/lib/x64/", <<- get lib .a in devel version
+                "-lSDL2"
             ],
             "options": {
                 "cwd": "${fileDirname}"
