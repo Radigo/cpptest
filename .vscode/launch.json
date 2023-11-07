@@ -5,10 +5,10 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "(gdb) SDLTest",
+            "name": "SDLTest",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/SDLTest.exe",
+            "program": "${workspaceFolder}/sdltest.exe",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${fileDirname}",
@@ -27,10 +27,11 @@
                     "text": "-gdb-set disassembly-flavor intel",
                     "ignoreFailures": true
                 }
-            ]
+            ],
+            "preLaunchTask": "mingw64 build"
         },
         {
-            "name": "(gdb) Launch Hello World",
+            "name": "HelloWorld",
             "type": "cppdbg",
             "request": "launch",
             "program": "${workspaceFolder}/helloworld.exe",
@@ -52,8 +53,8 @@
                     "text": "-gdb-set disassembly-flavor intel",
                     "ignoreFailures": true
                 }
-            ]
+            ],
+            "preLaunchTask": "helloworld build"
         }
-
     ]
 }
