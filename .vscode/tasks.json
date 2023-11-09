@@ -14,7 +14,7 @@
                 "${workspaceFolder}/sdltest.exe",
                 "-lSDL2",
                 "-lSDL2main",
-                "-mwindow"// Remove to allow console debug outside VScode
+                "-mwindows"// Remove to allow console debug outside VScode
             ],
             "options": {
                 "cwd": "${fileDirname}"
