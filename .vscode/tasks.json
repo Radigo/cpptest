@@ -12,6 +12,7 @@
                 "${workspaceFolder}/main.cpp",
                 "-o",
                 "${workspaceFolder}/sdltest.exe",
+                "${workspaceFolder}/src/*.cpp",
                 "-lSDL2",
                 "-lSDL2main",
                 "-mwindows"// Remove to allow console debug outside VScode
@@ -33,7 +34,8 @@
                 "-g",
                 "${workspaceFolder}/helloworld.cpp",
                 "-o",
-                "${workspaceFolder}/helloworld.exe"
+                "${workspaceFolder}/helloworld.exe",
+                "${workspaceFolder}/src/*.cpp"
             ],
             "options": {
                 "cwd": "${fileDirname}"

@@ -2,7 +2,7 @@
 #include <vector>
 #include <string>
 
-#include "src/test.cpp"
+#include "src/test.hpp"
 #include "src/template.hpp"
 
 using namespace std;
